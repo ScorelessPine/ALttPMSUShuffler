@@ -635,7 +635,7 @@ def generate_shuffled_msu(args, rompath):
     nonloopingfoundtracks = [i for i in foundtracks if i in nonloopingtracks]
 
     if args.live:
-        s.enter(1, 1, shuffle_all_tracks, argument=(rompath, args.fullshuffle, args.singleshuffle, args.dry_run, args.higan, args.forcerealcopy, args.live, args.nowplaying, int(args.live), 0))
+        s.enter(1, 1, shuffle_all_tracks, argument=(rompath, args.fullshuffle, args.singleshuffle, args.dry_run, args.higan, args.forcerealcopy, args.live, args.nowplaying, 0, 0))
         s.run()
     else:
         shuffle_all_tracks(rompath, args.fullshuffle, args.singleshuffle, args.dry_run, args.higan, args.forcerealcopy, args.live, args.nowplaying, 0, 0)
